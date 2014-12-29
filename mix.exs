@@ -2,17 +2,22 @@ defmodule Issues.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :issues,
-     version: "0.0.1",
-     elixir: "~> 1.0",
-     deps: deps]
+    [
+      app: :issues,
+      version: "0.0.1",
+      elixir:  ">= 0.0.0",
+      escript: escript_config,
+      deps: deps
+    ]
   end
 
   # Configuration for the OTP application
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger]]
+    [
+      applications: [ :logger, :httpoison, :jsx ] 
+    ]
   end
 
   # Dependencies can be Hex packages:
@@ -25,6 +30,13 @@ defmodule Issues.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    []
+    [
+      { :httpoison, "~> 0.4" },
+      { :jsx, "~> 2.0" }
+    ]
+  end
+
+  defp escript_config do
+    [ main_module: Issues.CLI ]
   end
 end
