@@ -7,6 +7,8 @@ defmodule Issues.Mixfile do
       version: "0.0.1",
       elixir:  ">= 0.0.0",
       escript: escript_config,
+      name: "Issues",
+      source_url: "https://github.com/pragdave/issues",
       deps: deps
     ]
   end
@@ -32,7 +34,9 @@ defmodule Issues.Mixfile do
   defp deps do
     [
       { :httpoison, "~> 0.4" },
-      { :jsx, "~> 2.0" }
+      { :jsx, "~> 2.0" },
+      { :ex_doc, github: "elixir-lang/ex_doc" },
+      { :markdown, github: "devinus/markdown" }
     ]
   end
 

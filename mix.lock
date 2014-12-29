@@ -1,4 +1,7 @@
-%{"hackney": {:hex, :hackney, "0.14.3"},
+%{"ex_doc": {:git, "git://github.com/elixir-lang/ex_doc.git", "54a6dabaf0c5cae1080047dce099c538395c94cb", []},
+  "hackney": {:hex, :hackney, "0.14.3"},
+  "hoedown": {:git, "git://github.com/hoedown/hoedown.git", "810c79db34077e9f1eff3e66ccb4f5d1c43d613b", []},
   "httpoison": {:hex, :httpoison, "0.5.0"},
   "idna": {:hex, :idna, "1.0.1"},
-  "jsx": {:hex, :jsx, "2.4.0"}}
+  "jsx": {:hex, :jsx, "2.4.0"},
+  "markdown": {:git, "git://github.com/devinus/markdown.git", "a428908a6dd88f351775d1d3da530a1a2aa0d6cb", []}}
